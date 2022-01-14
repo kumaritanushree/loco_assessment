@@ -1,0 +1,141 @@
+{
+	"info": {
+		"_postman_id": "cb6cdd27-c5e5-49e2-92ce-eb83cbee5afa",
+		"name": "loco-assesment-test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get transaction per id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/transactionservice/transaction/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"transactionservice",
+						"transaction",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "store transaction",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"Amount\":100, \"Txn_type\":\"car\", \"Parent_id\":0}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/transactionservice/transaction/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"transactionservice",
+						"transaction",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete transaction per id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/transactionservice/transaction/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"transactionservice",
+						"transaction",
+						"1"
+					]
+				},
+				"description": "Delete transaction per id"
+			},
+			"response": []
+		},
+		{
+			"name": "get list of transaction id per transaction type",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/transactionservice/types/car",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"transactionservice",
+						"types",
+						"car"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all available transaction info",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/transactionservice/transaction/list/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"transactionservice",
+						"transaction",
+						"list",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get sum of amount for given transaction id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/transactionservice/sum/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"transactionservice",
+						"sum",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
